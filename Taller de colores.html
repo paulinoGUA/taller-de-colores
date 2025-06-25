@@ -1,0 +1,359 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.6">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 40.0px '.SF NS'; color: #1b1f22; -webkit-text-stroke: #1b1f22; background-color: #ffffff}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 40.0px '.SF NS'; color: #1b1f22; -webkit-text-stroke: #1b1f22; background-color: #ffffff; min-height: 47.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="es"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;Taller de Mezcla de Pigmentos&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- Carga de Tailwind CSS para un estilizado rápido y responsivo --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* Define la fuente Inter si no está ya en el sistema */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: 'Inter', sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #f0fdf4; /* Un verde muy claro para el fondo */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>min-height: 100vh;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.container {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #ffffff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 1.5rem; /* Bordes más redondeados */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>max-width: 900px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 2.5rem; /* Más padding */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>flex-direction: column;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>gap: 2rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.color-palette {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>flex-wrap: wrap;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>gap: 0.75rem; /* Espaciado entre colores */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.color-swatch {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 50px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>height: 50px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 50%; /* Círculos perfectos */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 2px solid #cbd5e1; /* Borde sutil */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.color-swatch:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transform: scale(1.1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.color-picker {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>flex-direction: column;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>gap: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.mixed-color-display {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 150px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>height: 150px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 1.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 3px solid #6ee7b7; /* Borde verde claro */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #e2e8f0; /* Color inicial gris claro */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 0 auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition: background-color 0.5s ease-in-out;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.result-text {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 1.125rem; /* Texto más grande */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: 600;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #16a34a; /* Verde oscuro */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>button {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 0.75rem 1.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 0.75rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: 600;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition: background-color 0.3s ease, transform 0.2s ease;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>button:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transform: translateY(-2px);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.button-primary {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #059669; /* Verde más fuerte */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.button-primary:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #047857;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.feedback-message {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-top: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 1rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border-radius: 0.75rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: 500;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>opacity: 0; /* Oculto por defecto */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>transition: opacity 0.5s ease;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.feedback-message.show {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>opacity: 1; /* Mostrar mensaje */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.feedback-success {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #d1fae5; /* Verde claro */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #065f46; /* Verde oscuro */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.feedback-error {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #fee2e2; /* Rojo claro */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #991b1b; /* Rojo oscuro */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>/* Estilos responsivos para dispositivos móviles */</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>@media (max-width: 768px) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.container {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>padding: 1.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>gap: 1.5rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.color-swatch {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>width: 45px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>height: 45px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.mixed-color-display {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>width: 120px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>height: 120px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>h1 {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>font-size: 1.75rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>p {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>font-size: 0.9rem;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;h1 class="text-3xl font-bold text-center text-gray-800 mb-4"&gt;🎨 Taller de Mezcla de Pigmentos: ¡Descubre el Color! 🖌️&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;p class="text-lg text-center text-gray-600"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;strong&gt;Instrucciones:&lt;/strong&gt; Selecciona dos colores primarios de la paleta. Después de mezclar, te desafiaremos a nombrar el color resultante.</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>¡Explora y experimenta con la combinación de pigmentos!</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="grid grid-cols-1 md:grid-cols-2 gap-6"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;!-- Sección de selección de colores --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="color-picker p-6 bg-gray-50 rounded-xl shadow-inner"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-xl font-semibold text-gray-700 mb-4 text-center"&gt;Selecciona tus Pigmentos&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="color-palette"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;!-- Colores primarios --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="color-swatch" style="background-color: #FF0000;" data-color="red" data-name="Rojo" onclick="selectColor(this)"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="color-swatch" style="background-color: #0000FF;" data-color="blue" data-name="Azul" onclick="selectColor(this)"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div class="color-swatch" style="background-color: #FFFF00;" data-color="yellow" data-name="Amarillo" onclick="selectColor(this)"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="flex justify-center mt-4 gap-4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div id="selectedColor1" class="w-20 h-20 border-2 border-dashed border-gray-400 rounded-lg flex items-center justify-center text-gray-500 font-medium"&gt;1er Color&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div id="selectedColor2" class="w-20 h-20 border-2 border-dashed border-gray-400 rounded-lg flex items-center justify-center text-gray-500 font-medium"&gt;2do Color&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;button class="button-primary mt-6" onclick="mixColors()"&gt;¡Mezclar Colores!&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;!-- Sección de resultado y desafío --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="p-6 bg-gray-50 rounded-xl shadow-inner flex flex-col items-center justify-center gap-4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-xl font-semibold text-gray-700 text-center"&gt;Color Resultante&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div id="mixedColorDisplay" class="mixed-color-display"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;p id="resultText" class="result-text mt-2"&gt;Mezcla los colores para ver el resultado.&lt;/p&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;div class="w-full flex flex-col items-center mt-4"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;label for="colorGuess" class="text-gray-700 text-lg mb-2"&gt;¿Cómo se llama este color?&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;input type="text" id="colorGuess" class="w-full max-w-xs p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400" placeholder="Escribe tu respuesta aquí..."&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;button class="button-primary mt-4" onclick="checkGuess()"&gt;Verificar Respuesta&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>&lt;div id="feedbackMessage" class="feedback-message"&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script type="module"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Importar las funciones de Firebase</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>import { getFirestore, doc, setDoc, getDoc, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Inicializar variables globales para Firebase</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let app;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let db;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let auth;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let userId;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Configuración de Firebase (se inyecta en el entorno de Canvas)</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const firebaseConfig = JSON.parse(typeof __firebase_config !== 'undefined' ? __firebase_config : '{}');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Función para inicializar Firebase y autenticar al usuario</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>async function initializeFirebase() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>try {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>if (!app) { // Inicializar la app solo una vez</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>app = initializeApp(firebaseConfig);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>db = getFirestore(app);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>auth = getAuth(app);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>// Autenticar al usuario</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>if (typeof __initial_auth_token !== 'undefined') {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>await signInWithCustomToken(auth, __initial_auth_token);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>await signInAnonymously(auth);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>// Obtener el userId después de la autenticación</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>userId = auth.currentUser?.uid || crypto.randomUUID();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>console.log("Firebase inicializado. User ID:", userId);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} catch (error) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>console.error("Error al inicializar Firebase o autenticar:", error);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Llamar a la función de inicialización de Firebase al cargar la ventana</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>window.onload = initializeFirebase;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let selectedColors = [];</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const colorNames = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"red": "Rojo",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"blue": "Azul",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"yellow": "Amarillo",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"orange": "Naranja",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"green": "Verde",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"purple": "Violeta"</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>};</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const colorHex = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"red": "#FF0000",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"blue": "#0000FF",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"yellow": "#FFFF00",</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"orange": "#FFA500", // Rojo + Amarillo</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"green": "#008000", // Azul + Amarillo</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"purple": "#800080" // Rojo + Azul</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>};</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>const mixRules = {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"red_yellow": { name: "Naranja", hex: "#FFA500" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"yellow_red": { name: "Naranja", hex: "#FFA500" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"blue_yellow": { name: "Verde", hex: "#008000" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"yellow_blue": { name: "Verde", hex: "#008000" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"red_blue": { name: "Violeta", hex: "#800080" },</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>"blue_red": { name: "Violeta", hex: "#800080" }</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>};</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>let currentMixedColorName = ''; // Para almacenar el nombre del color mezclado actual</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Función para seleccionar colores</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function selectColor(element) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const color = element.dataset.color;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const colorName = element.dataset.name;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (selectedColors.length &lt; 2) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>selectedColors.push({ color: color, name: colorName });</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>updateSelectedColorDisplay();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// Si ya hay dos colores, reemplazar el primero</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>selectedColors.shift();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>selectedColors.push({ color: color, name: colorName });</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>updateSelectedColorDisplay();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Actualiza la visualización de los colores seleccionados</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function updateSelectedColorDisplay() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const selectedColor1Div = document.getElementById('selectedColor1');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const selectedColor2Div = document.getElementById('selectedColor2');</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>selectedColor1Div.innerHTML = selectedColors[0] ? `&lt;div class="w-full h-full rounded-lg" style="background-color: ${colorHex[selectedColors[0].color]};"&gt;&lt;/div&gt;` : '1er Color';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>selectedColor2Div.innerHTML = selectedColors[1] ? `&lt;div class="w-full h-full rounded-lg" style="background-color: ${colorHex[selectedColors[1].color]};"&gt;&lt;/div&gt;` : '2do Color';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Función para mezclar colores</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>async function mixColors() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const mixedColorDisplay = document.getElementById('mixedColorDisplay');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const resultText = document.getElementById('resultText');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const feedbackMessage = document.getElementById('feedbackMessage');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>feedbackMessage.classList.remove('show', 'feedback-success', 'feedback-error'); // Limpiar mensajes anteriores</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById('colorGuess').value = ''; // Limpiar campo de adivinanza</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (selectedColors.length === 2) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const mixKey = `${selectedColors[0].color}_${selectedColors[1].color}`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const mixedResult = mixRules[mixKey];</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>if (mixedResult) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>mixedColorDisplay.style.backgroundColor = mixedResult.hex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>resultText.textContent = `¡Has mezclado ${selectedColors[0].name} y ${selectedColors[1].name}!`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>currentMixedColorName = mixedResult.name; // Almacenar el nombre correcto del color mezclado</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>console.log(`Color mezclado: ${currentMixedColorName}`);</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>// Guardar la mezcla en Firestore</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>if (db &amp;&amp; userId) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>try {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>const mixesCollectionRef = collection(db, `artifacts/${appId}/users/${userId}/colorMixes`);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>await addDoc(mixesCollectionRef, {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>color1: selectedColors[0].name,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>color2: selectedColors[1].name,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>mixedColor: mixedResult.name,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                                </span>timestamp: new Date()</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>console.log("Mezcla guardada en Firestore.");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>} catch (e) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                            </span>console.error("Error al guardar la mezcla en Firestore:", e);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>console.warn("Firebase no está listo o userId no disponible para guardar la mezcla.");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>mixedColorDisplay.style.backgroundColor = '#e2e8f0'; // Volver al color por defecto si la mezcla no está definida</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>resultText.textContent = "Mezcla de colores no definida. Intenta con colores primarios.";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>currentMixedColorName = '';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>resultText.textContent = "Por favor, selecciona dos colores para mezclar.";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>mixedColorDisplay.style.backgroundColor = '#e2e8f0';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>currentMixedColorName = '';</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// Función para verificar la adivinanza del usuario</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>function checkGuess() {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const userGuess = document.getElementById('colorGuess').value.trim();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const feedbackMessage = document.getElementById('feedbackMessage');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>feedbackMessage.classList.remove('feedback-success', 'feedback-error'); // Limpiar clases anteriores</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (!currentMixedColorName) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>feedbackMessage.textContent = "Primero, mezcla dos colores.";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>feedbackMessage.classList.add('feedback-error', 'show');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>return;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>if (userGuess.toLowerCase() === currentMixedColorName.toLowerCase()) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>feedbackMessage.textContent = `¡Correcto! Es ${currentMixedColorName}. ¡Excelente! 🎉`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>feedbackMessage.classList.add('feedback-success', 'show');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>} else {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>feedbackMessage.textContent = `Incorrecto. El color es ${currentMixedColorName}. ¡Sigue practicando! 🤔`;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>feedbackMessage.classList.add('feedback-error', 'show');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+</body>
+</html>
